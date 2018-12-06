@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YourApp</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<!-- use CSS grid to layout major portions of the page: header, nav, and main -->
+<body class="grid-container">
+    <header class="header">
+        <h1 class="headline app-name">Your<span class="app-name-thin">App<sup>TM</sup>
+            </span></h1>
+        <div class="bell">
+            <svg class="bell-icon" x="0px" y="0px" viewBox="0 0 32 32" >
+                <path class="bell-icon-path" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+			c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+            </svg>
+        </div>  <!-- Bell icon -->
+        <img class="profile-image" src="images/Sept2018Profile.jpg"/> <!-- Profile pic -->
+        <h3 class="profile-name">Randy Layne</h3>
+    </header>
+
+    <!-- main navigation -->
+    <nav class="nav">
+        <a class="nav-link active" href="index.html">
+            <img class="nav-link-icon" alt="Dashboard" src="images/icon-dashboard.svg" />
+        </a>
+        <a class="nav-link" href="index.html">
+            <img class="nav-link-icon" alt="Dashboard" src="images/icon-members.svg" />
+        </a>
+        <a class="nav-link" href="index.html">
+            <img class="nav-link-icon" alt="Dashboard" src="images/icon-visits.svg" />
+        </a>
+        <a class="nav-link" href="index.html">
+            <img class="nav-link-icon" alt="Dashboard" src="images/icon-settings.svg" />
+        </a>
+    </nav>
+
+    <!-- widget container -->
+    <main class="main">
+        <div class="main-header">
+            <h2 class="headline">Dashboard</h2>
+            <div class="main-header-search">
+                <input type="search" />
+            </div>
+        </div>
+
+        <!-- line graph charts -->
+        <section class="traffic">
+            <div class="traffic-header">
+                <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container">
+                
+                <!-- use static image as a placeholder until JS added -->
+                <img src="images/traffic.png" />
+            </div>
+
+        </section>
+
+        <!-- bar graph -->
+        <section class="daily">
+            <h3>Daily Traffic</h3>
+
+            <div class="widget-container">
+
+                <!-- use static image as a placeholder until JS added -->
+                <img src="images/bar_graph.png" />
+            </div>
+        </section>
+
+        <!-- doughnut chart -->
+        <section class="mobile">
+            <h3>Mobile Users</h3>
+
+            <div class="widget-container">
+
+                <!-- use static image as a placeholder until JS added -->
+                <img src="images/doughnut_graph.png" />
+            </div>
+        </section>
+
+        <!-- social stats widget -->
+        <section class="social">
+            <h3>Social Stats</h3>
+
+            <div class="widget-container">
+                <div class="social-container">
+                    <svg></svg>
+                    <h3>Twitter</h3>
+                    <p>10,345</p>
+                </div>
+                <div class="social-container">
+                    <svg></svg>
+                    <h3>Twitter</h3>
+                    <p>10,345</p>
+                </div>
+                <div class="social-container">
+                    <svg></svg>
+                    <h3>Twitter</h3>
+                    <p>10,345</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- new members widget -->
+        <section class="members">
+            <h3>New Members</h3>
+
+        </section>
+
+        <!-- recent activities widget -->
+        <section class="activity">
+            <h3>Recent Activity</h3>
+        </section>
+
+        <!-- messaging widget -->
+        <section class="message">
+            <h3>Message User</h3>
+        </section>
+
+        <!-- local settings widget -->
+        <section class="settings">
+            <h3>Settings</h3>
+        </section>
+    </main>
+</body>
+</html>

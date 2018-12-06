@@ -1,0 +1,55 @@
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $color-primary;
+  color: lighten($color-primary, 65%);
+}
+
+.app-name {
+  flex-grow: 1;
+  padding-left: 15px;
+  &-thin {
+    font-weight: 100;
+  }
+}
+
+.bell {
+  padding-right: 15px;
+  border-right: 2px solid darken($color-primary, 20%);
+  position: relative;
+  &:after {
+    display: block;
+    content: " ";
+    background-color: $color-complementary;
+    border-radius: 50%;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 0;
+    right: 10px;
+  }
+  &-icon {
+    width: 30px;
+    padding-top: 5px;
+    &-path {
+      fill: currentColor;
+    }
+
+  }
+}
+
+
+.profile {
+  &-image {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+  }
+
+  &-name {
+    padding-right: 15px;
+  }
+}

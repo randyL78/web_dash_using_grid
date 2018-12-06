@@ -1,0 +1,98 @@
+.main {
+  grid-area: main;
+  display: grid;
+  @include mq {
+    grid-template-columns: 50% ;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / span 2;
+
+    & .headline {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &-search {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      background-color: lightgray;
+      padding: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+  & section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.widget-container {
+
+  // for the placeholder images while developing
+  & img {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+
+.traffic {
+  @extend %widgets;
+  min-height: 200px;
+  &-header {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 75px;
+  }
+  &-nav {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    &-link {
+      padding: 10px 10px;
+      height: 1em;
+      border-radius: 20px;
+      transition: background-color .3s, color .3s;
+      &.active {
+        @extend %active-pill;
+      }
+      &:hover {
+        @extend %active-pill;
+      }
+    }
+  }
+}
+
+.daily {
+  @extend %widgets-left;
+}
+
+.mobile {
+  @extend %widgets-right
+}
+
+.social {
+  @extend %widgets;
+  min-height: 200px;
+}
+
+.members {
+  @extend %widgets-left;
+
+}
+
+.activity {
+  @extend %widgets-right;
+}
+
+.message {
+  @extend %widgets-left;
+}
+
+.settings {
+  @extend %widgets-right;
+}

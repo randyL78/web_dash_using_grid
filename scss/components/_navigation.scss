@@ -1,0 +1,34 @@
+.nav {
+  grid-area: navigation;
+  display: flex;
+  justify-content: center;
+  background-color: darken($color-primary, 20%);
+  @include mq {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &-link {
+    padding: 5px 15px;
+    text-decoration: none;
+    border: darken($color-primary, 20%) 3px solid;
+    @include mq {
+      padding: 10px 5px;
+    }
+
+    &.active {
+      border-bottom: $color-complementary 3px solid;
+      @include mq {
+        border-bottom: darken($color-primary, 20%) 3px solid;
+        border-left: $color-complementary 3px solid;
+      }
+    }
+    &-icon {
+      width: 35px;
+      opacity: .8;
+      transition: opacity.3s;
+      &:hover {
+        opacity: 1.0;
+      }
+    }
+  }
+}

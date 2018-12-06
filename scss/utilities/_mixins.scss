@@ -1,0 +1,19 @@
+/* Media query selector
+ * @param $break-size size of media query breakpoint, defaults to medium
+ */
+@mixin mq($break-size : medium) {
+  // checks if $break-size value is in map, if not through error
+  @if type-of(map-get($media-breakpoints, $break-size) ) == 'null' {
+    $message : "`#{$break-size}` is not a valid breakpoint for mq, please enter: ";
+    // add each map key to message so user knows what values are valid
+    @each $key in $media-breakpoints {
+      $message : $message + " " + $key;
+    }
+    @error $message;
+  }
+
+  // set the media query and add caller's content
+  @media (min-width: map-get($media-breakpoints, $break-size)) {
+    @content;
+  }
+}

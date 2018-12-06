@@ -1,0 +1,25 @@
+%widgets {
+  display:flex;
+  flex-direction: column;
+  min-height: 300px;
+  grid-column: 1 / span 2;
+}
+
+%widgets-right {
+  @extend %widgets;
+  @include mq {
+    grid-column: 2 / span 1;
+  }
+}
+
+%widgets-left {
+  @extend %widgets;
+  @include mq {
+    grid-column: 1 / span 1;
+  }
+}
+
+%active-pill {
+  background-color: $color-complementary;
+  color: #fff;
+}

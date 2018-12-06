@@ -1,0 +1,36 @@
+// import the theme color partial;
+@import 'theme-colors';
+
+// create basic colors from theme-colors
+$color-primary      : lighten($ship-cove, 7%);
+$color-secondary    : $fountain-blue;
+$color-complementary: $de-york;
+$color-success      : #66eeaa;
+
+// color adjust variables (for use in color functions)
+// wrap in a map to help keep naming confusion down later as styles expand
+$color-adjustment-values: (
+        xx-light: 32%,
+        x-light : 24%,
+        light   : 12%,
+        dark    : 12%,
+        x-dark  : 24%,
+        xx-dark : 36%
+);
+
+// Media query breakpoints
+// wrap in a map to help keep naming confusion down later as styles expand
+$media-breakpoints : (
+        small   : 480px,
+        medium  : 768px,
+        large   : 1024px,
+        x-large : 1400px
+);
+
+
+// fonts
+$font-url--primary    : 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary : Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-url--headline   : 'https://fonts.googleapis.com/css?family=Open+Sans:300,700';
+$font-family--headline: 'Open Sans', sans-serif;
