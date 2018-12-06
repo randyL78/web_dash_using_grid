@@ -1,20 +1,25 @@
 %widgets {
   display:flex;
   flex-direction: column;
-  min-height: 300px;
+  min-height: 200px;
   grid-column: 1 / span 2;
+
+}
+
+%widgets-bordered {
+  @extend %widgets;
+  border-top: 1px solid lighten($color-primary, 20%);
 }
 
 %widgets-right {
-  @extend %widgets;
-  border-top: 1px solid lighten($color-primary, 20%);
+  @extend %widgets-bordered;
   @include mq {
     grid-column: 2 / span 1;
   }
 }
 
 %widgets-left {
-  @extend %widgets;
+  @extend %widgets-bordered;
   border-top: 1px solid lighten($color-primary, 20%);
   @include mq {
     grid-column: 1 / span 1;

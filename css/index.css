@@ -2,17 +2,18 @@
  * @param $break-size size of media query breakpoint, defaults to medium
  */
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-.mobile, .activity, .settings, .daily, .members, .message, .traffic, .social {
+.mobile, .activity, .settings, .daily, .members, .message, .social, .traffic {
   display: flex;
   flex-direction: column;
-  min-height: 300px;
+  min-height: 200px;
   grid-column: 1 / span 2; }
 
-.mobile, .activity, .settings {
+.mobile, .activity, .settings, .daily, .members, .message, .social {
   border-top: 1px solid #d2d3ea; }
-  @media (min-width: 768px) {
-    .mobile, .activity, .settings {
-      grid-column: 2 / span 1; } }
+
+@media (min-width: 768px) {
+  .mobile, .activity, .settings {
+    grid-column: 2 / span 1; } }
 
 .daily, .members, .message {
   border-top: 1px solid #d2d3ea; }
@@ -423,6 +424,13 @@ sup {
       background-color: lightgray;
       padding: 10px;
       border-bottom-left-radius: 10px; }
+      .main-header-search input {
+        max-width: 250px;
+        width: 80%;
+        border-radius: 5px;
+        line-height: 1.35em;
+        border: 1px solid #d2d3ea;
+        padding-left: .5em; }
   .main section {
     padding-left: 15px;
     padding-right: 15px; }
@@ -495,6 +503,12 @@ sup {
 
 .members-container {
   display: flex; }
+  .members-container + .members-container {
+    border-top: 1px solid #d2d3ea; }
+  .members-container p {
+    margin-bottom: 0; }
+.members-text {
+  flex-grow: 1; }
 
 .grid-container {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
