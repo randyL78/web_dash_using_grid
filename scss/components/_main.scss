@@ -35,8 +35,17 @@
     display: block;
     width: 100%;
   }
-}
 
+  &-social {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    @include mq {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
 
 
 .traffic {
@@ -72,16 +81,75 @@
 }
 
 .mobile {
-  @extend %widgets-right
+  @extend %widgets-right;
 }
 
 .social {
   @extend %widgets;
-  min-height: 200px;
+  // min-height: 200px;
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lighten($color-primary, 20%);
+    background-color: lighten($color-primary, 30%);
+    align-items: center;
+    padding: .5em;
+    justify-content: space-around;
+    border-radius: 5px;
+    // max-width: 400px;
+    flex-grow: 1;
+    @include mq {
+      flex-grow: 1;
+      max-width: 275px;
+    }
+
+    & + & {
+      margin-top: 1em;
+      @include mq {
+        margin-top: initial;
+      }
+    }
+  }
+
+  &-image {
+    @extend %round-images;
+    display: inline-block;
+    background-color: $color-primary;
+    padding: 1em;
+
+    &-svg {
+      display: block;
+      width: 55px;
+    }
+
+    &-path {
+      fill: currentColor;
+      color: lighten($color-primary, 35%);
+    }
+  }
+
+  &-text {
+    & p {
+      color: $color-primary;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    & p + p {
+      color: #555;
+      font-weight: lighter;
+      font-size: 2.5em;
+    }
+  }
 }
 
 .members {
   @extend %widgets-left;
+
+  &-container {
+    display: flex;
+  }
 
 }
 

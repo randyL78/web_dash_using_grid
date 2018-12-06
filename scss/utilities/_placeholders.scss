@@ -7,6 +7,7 @@
 
 %widgets-right {
   @extend %widgets;
+  border-top: 1px solid lighten($color-primary, 20%);
   @include mq {
     grid-column: 2 / span 1;
   }
@@ -14,12 +15,18 @@
 
 %widgets-left {
   @extend %widgets;
+  border-top: 1px solid lighten($color-primary, 20%);
   @include mq {
     grid-column: 1 / span 1;
+    border-right: 1px solid lighten($color-primary, 20%);
   }
 }
 
 %active-pill {
   background-color: $color-complementary;
   color: #fff;
+}
+
+%round-images {
+  border-radius: 50%;
 }

@@ -43,7 +43,7 @@
 
 .profile {
   &-image {
-    border-radius: 50%;
+    @extend %round-images;
     width: 45px;
     height: 45px;
     padding: 10px;

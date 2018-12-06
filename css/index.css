@@ -8,17 +8,25 @@
   min-height: 300px;
   grid-column: 1 / span 2; }
 
-@media (min-width: 768px) {
-  .mobile, .activity, .settings {
-    grid-column: 2 / span 1; } }
+.mobile, .activity, .settings {
+  border-top: 1px solid #d2d3ea; }
+  @media (min-width: 768px) {
+    .mobile, .activity, .settings {
+      grid-column: 2 / span 1; } }
 
-@media (min-width: 768px) {
-  .daily, .members, .message {
-    grid-column: 1 / span 1; } }
+.daily, .members, .message {
+  border-top: 1px solid #d2d3ea; }
+  @media (min-width: 768px) {
+    .daily, .members, .message {
+      grid-column: 1 / span 1;
+      border-right: 1px solid #d2d3ea; } }
 
 .traffic-nav-link.active, .traffic-nav-link:hover {
   background-color: #78CF82;
   color: #fff; }
+
+.profile-image, .social-image {
+  border-radius: 50%; }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -360,7 +368,6 @@ sup {
       fill: currentColor; }
 
 .profile-image {
-  border-radius: 50%;
   width: 45px;
   height: 45px;
   padding: 10px; }
@@ -423,6 +430,13 @@ sup {
 .widget-container img {
   display: block;
   width: 100%; }
+.widget-container-social {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .widget-container-social {
+      flex-direction: row;
+      justify-content: space-around; } }
 
 .traffic {
   min-height: 200px; }
@@ -441,8 +455,46 @@ sup {
       border-radius: 20px;
       transition: background-color .3s, color .3s; }
 
-.social {
-  min-height: 200px; }
+.social-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d2d3ea;
+  background-color: #f5f5fa;
+  align-items: center;
+  padding: .5em;
+  justify-content: space-around;
+  border-radius: 5px;
+  flex-grow: 1; }
+  @media (min-width: 768px) {
+    .social-container {
+      flex-grow: 1;
+      max-width: 275px; } }
+  .social-container + .social-container {
+    margin-top: 1em; }
+    @media (min-width: 768px) {
+      .social-container + .social-container {
+        margin-top: initial; } }
+.social-image {
+  display: inline-block;
+  background-color: #8c8fca;
+  padding: 1em; }
+  .social-image-svg {
+    display: block;
+    width: 55px; }
+  .social-image-path {
+    fill: currentColor;
+    color: white; }
+.social-text p {
+  color: #8c8fca;
+  font-weight: bold;
+  margin: 0; }
+.social-text p + p {
+  color: #555;
+  font-weight: lighter;
+  font-size: 2.5em; }
+
+.members-container {
+  display: flex; }
 
 .grid-container {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
