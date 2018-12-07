@@ -469,7 +469,7 @@ sup {
     max-width: 1000px; } }
 @media (min-width: 768px) {
   .widget-container-half {
-    width: 45vw;
+    width: 42vw;
     max-width: 1000px; } }
 .widget-container-social {
   display: flex;
