@@ -1,0 +1,61 @@
+$base-width: 35px;
+$slider-width: 130px;
+$slider-color: $color-primary;
+$button-width: 20px;
+$toggle-width: 60px;
+
+.toggle {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid darken($slider-color, 25%);
+  border-radius: 3px;
+  width: $toggle-width;
+  height: 1.7em;
+  border-radius: 1em;
+  // box-shadow: inset darken($slider-color, 35%) 0 2px 2px 0;
+  
+  
+  &__slider {
+    height: 1.5em;
+    color: white;
+    position: absolute;
+    left: -$base-width;
+    margin-left: 0px;
+    background-color: $slider-color;
+    display: inline-block;
+    width: $slider-width;
+    transition: .4s margin-left;
+    z-index: -1;
+   
+  }
+  
+  &__switch {
+    width: $base-width;
+    display: inline-block;
+    text-align: center;
+    &--on {
+      margin-left: 0px;
+    }
+    &--button {
+      margin: 2px;
+      width: $button-width;
+      border-radius: 50%;
+      background-color: white;
+      // box-shadow: 
+      //   inset #444 -3px -3px 3px,
+      //   inset #222 0 0 5px,
+      //   #000 3px 1px 4px 0,;
+    }
+  }
+  
+  &__input {
+    display: none;
+    &:checked {
+      & + .toggle__slider {
+        margin-left: 30px;
+      }
+    }
+  }
+}
