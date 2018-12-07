@@ -5,7 +5,7 @@ void function() {
   const trafficCanvas = document.getElementById("traffic-chart");
 
   let trafficChart = new Chart(trafficCanvas, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [{
@@ -87,7 +87,7 @@ void function() {
   const mobileCanvas = document.getElementById("mobile-chart");
 
   let mobileChart = new Chart(mobileCanvas, {
-    type: 'bar',
+    type: 'doughnut',
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [{
