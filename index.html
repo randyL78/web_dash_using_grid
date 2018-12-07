@@ -57,10 +57,9 @@
                     <li class="traffic-nav-link">Monthly</li>
                 </ul>
             </div>
-            <div class="widget-container">
-                
-                <!-- use static image as a placeholder until JS added -->
-                <img src="images/traffic.png" />
+            <div class="widget-container-full">
+                <!-- element line graph will attach to -->
+                <canvas id="traffic-chart"></canvas>
             </div>
 
         </section>
@@ -69,10 +68,9 @@
         <section class="daily">
             <h3>Daily Traffic</h3>
 
-            <div class="widget-container">
-
-                <!-- use static image as a placeholder until JS added -->
-                <img src="images/bar_graph.png" />
+            <div class="widget-container-half">
+                <!-- element bar graph will attach to -->
+                <canvas id="daily-chart"></canvas>
             </div>
         </section>
 
@@ -80,10 +78,9 @@
         <section class="mobile">
             <h3>Mobile Users</h3>
 
-            <div class="widget-container">
-
-                <!-- use static image as a placeholder until JS added -->
-                <img src="images/doughnut_graph.png" />
+            <div class="widget-container-half">
+                <!-- element bar graph will attach to -->
+                <canvas id="mobile-chart"></canvas>
             </div>
         </section>
 
@@ -262,5 +259,14 @@
             </div>
         </section>
     </main>
+
+    <!-- Include chart.js files via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+    <!-- Custom JavaScript files -->
+    <script src="js/main.js"></script>
+    <script src="js/graphs.js"></script>
+    <script src="js/messaging.js"></script>
+    <script src="js/settings.js"></script>
 </body>
 </html>

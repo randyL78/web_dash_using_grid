@@ -45,6 +45,21 @@
     width: 100%;
   }
 
+  &-full {
+    @extend %chart-container;
+    @include mq {
+      max-width: 1000px;
+    }
+  }
+
+  &-half {
+    @extend %chart-container;
+    @include mq {
+      width: 45vw;
+      max-width: 1000px;
+    }
+  }
+
   &-social {
     display: flex;
     flex-direction: column;

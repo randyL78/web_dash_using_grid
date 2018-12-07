@@ -59,3 +59,12 @@
   width: 95%;
   margin-bottom: .5em;
 }
+
+%chart-container {
+  position: relative;
+  width: 90vw;
+  @include mq {
+    display: block;
+    margin: 0 auto;
+  }
+}
