@@ -228,9 +228,11 @@
             <h3>Message User</h3>
 
             <div class="widget-container">
-                <input type="text" placeholder="Search for user" class="form-field">
-                <textarea placeholder="Message for user" class="form-area"></textarea>
-                <button class="button-primary">Send</button>
+                <input type="text" list="userList" placeholder="Search for user" class="form-field" id="userField"> 
+                <datalist id="userList">
+                </datalist>
+                <textarea placeholder="Message for user" class="form-area" id= "messageField" ></textarea>
+                <button class="button-primary" id="send" >Send</button>
             </div>
         </section>
 
