@@ -15,14 +15,24 @@
   }
 }
 
+@keyframes shake {
+  0%  { transform: rotate(-15deg); }
+  16% { transform: rotate(15deg); }
+  33%  { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+  66%  { transform: rotate(-15deg); }
+  83% { transform: rotate(15deg); }
+}
+
 .bell {
   padding-right: 15px;
   border-right: 2px solid darken($color-primary, 20%);
   position: relative;
+
   &:after {
     display: block;
     content: " ";
-    background-color: $color-complementary;
+    background-color: darken($color-primary, 20%);
     border-radius: 50%;
     position: absolute;
     height: 10px;
@@ -30,13 +40,24 @@
     top: 0;
     right: 10px;
   }
+  &-new {
+    &:after {
+      font-size: 8px;
+      background-color: $color-complementary;      
+    }
+  }
   &-icon {
     width: 30px;
     padding-top: 5px;
     &-path {
       fill: currentColor;
     }
-
+  }
+  &-shake {
+    &:hover {
+      animation: shake .45s;
+      
+    }
   }
 }
 

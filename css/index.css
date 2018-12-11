@@ -377,6 +377,19 @@ sup {
   .app-name-thin {
     font-weight: 100; }
 
+@keyframes shake {
+  0% {
+    transform: rotate(-15deg); }
+  16% {
+    transform: rotate(15deg); }
+  33% {
+    transform: rotate(-15deg); }
+  50% {
+    transform: rotate(15deg); }
+  66% {
+    transform: rotate(-15deg); }
+  83% {
+    transform: rotate(15deg); } }
 .bell {
   padding-right: 15px;
   border-right: 2px solid #4c4fa5;
@@ -384,18 +397,23 @@ sup {
   .bell:after {
     display: block;
     content: " ";
-    background-color: #78CF82;
+    background-color: #4c4fa5;
     border-radius: 50%;
     position: absolute;
     height: 10px;
     width: 10px;
     top: 0;
     right: 10px; }
+  .bell-new:after {
+    font-size: 8px;
+    background-color: #78CF82; }
   .bell-icon {
     width: 30px;
     padding-top: 5px; }
     .bell-icon-path {
       fill: currentColor; }
+  .bell-shake:hover {
+    animation: shake .45s; }
 
 .profile-image {
   width: 45px;
@@ -588,6 +606,27 @@ select.form-field {
         transition: color .4s ease-in;
         color: #51B6C8;
         cursor: pointer; }
+
+.notification-container {
+  text-align: center;
+  position: absolute;
+  background-color: #fff;
+  color: #8c8fca;
+  left: -140px;
+  top: 45px;
+  width: 300px;
+  z-index: 100;
+  border-radius: 5px;
+  padding: .25em;
+  border: 2px solid #e4e4f2; }
+  .notification-container p {
+    margin: .5em; }
+    .notification-container p + P {
+      border-top: 1px solid #e4e4f2;
+      padding-top: .25em; }
+
+.hidden {
+  display: none !important; }
 
 .grid-container {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
