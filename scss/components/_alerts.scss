@@ -1,0 +1,20 @@
+.alert {
+  grid-column: 1 / span 2;
+  &-banner {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-primary;
+    color: #fff;
+    padding: 0 .5em;
+    margin: 1.25em 2% 0;
+    border-radius: 5px;
+    &-close {
+      font-weight: bold;
+      &:hover {
+        transition: color .4s ease-in;
+        color: $color-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+}
