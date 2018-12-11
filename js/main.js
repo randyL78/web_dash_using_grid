@@ -5,9 +5,8 @@ void function() {
 
   const bell = document.getElementsByClassName("bell")[0];
   const notifications = document.getElementById("notifications");
-  const bellSound = document.getElementById("bell-sound");
+  // const bellSound = document.getElementById("bell-sound");
 
-  console.log(bellSound);
   
   // create the html for the banner
   const notificationHtml =
@@ -39,6 +38,16 @@ void function() {
     }
   });
 
+  window.addEventListener('click', e => {
+    console.log(e.target.parentElement)
+    // ensure notifications close if user clicks outside of notification area
+    if (e.target != bell && 
+        e.target.parentElement != bell &&
+        e.target.parentElement.parentElement !=bell
+        ) {
+      notifications.classList.add("hidden");
+    }
+  })
   
   // bell.addEventListener("mouseover", () => {
   //   bellSound.currentTime = 3;
@@ -66,11 +75,12 @@ void function() {
       <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
       <p class="alert-banner-close">x</p>
     </div>
-    <div class="alert-banner">
-      <p><strong>Alert:</strong> You have <strong>4</strong> new messages</p>
-      <p class="alert-banner-close">x</p>
-    </div>
     `
+    // <div class="alert-banner">
+    //   <p><strong>Alert:</strong> You have <strong>4</strong> new messages</p>
+    //   <p class="alert-banner-close">x</p>
+    // </div>
+    
   alert.innerHTML = alertHtml;
 
   // use event bubbling to listen for close button on alert container
