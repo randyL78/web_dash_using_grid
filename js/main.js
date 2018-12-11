@@ -39,7 +39,6 @@ void function() {
   });
 
   window.addEventListener('click', e => {
-    console.log(e.target.parentElement)
     // ensure notifications close if user clicks outside of notification area
     if (e.target != bell && 
         e.target.parentElement != bell &&
